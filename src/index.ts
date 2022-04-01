@@ -34,7 +34,7 @@ WA.onInit().then(() => {
     WA.room.onEnterLayer('game01Zone').subscribe(() => {
         console.log('game01Zone onEnterLayer');
         const triggerMessage = WA.ui.displayActionMessage({
-            message: "Press SPACE to play Games",
+            message: "Press or tap the spacebar to play the game.",
             callback: () => {
                 WA.nav.openCoWebSite("https://gamesnacks.com/embed", true, "allowfullscreen");
             }
@@ -57,7 +57,7 @@ WA.onInit().then(() => {
         console.log('game02Zone onEnterLayer');
 
         const triggerMessage = WA.ui.displayActionMessage({
-            message: "Press SPACE to play Games",
+            message: "Press or tap the spacebar to play the game.",
             callback: () => {
                 WA.nav.openCoWebSite("https://gamesnacks.com/embed", true, "allowfullscreen");
             }
@@ -67,8 +67,7 @@ WA.onInit().then(() => {
             // later
             triggerMessage.remove();
         }, 3000);
-       
-        
+
     })
     WA.room.onLeaveLayer('game02Zone').subscribe(() => {
         console.log('game02Zone onLeaveLayer');
@@ -80,7 +79,7 @@ WA.onInit().then(() => {
         console.log('game03Zone onEnterLayer');
 
         const triggerMessage = WA.ui.displayActionMessage({
-            message: "Press SPACE to play Games",
+            message: "Press or tap the spacebar to play the game.",
             callback: () => {
                 WA.nav.openCoWebSite("https://buddyboardgames.com", true, "allowfullscreen");
             }
@@ -90,14 +89,85 @@ WA.onInit().then(() => {
             // later
             triggerMessage.remove();
         }, 3000);
-       
-        
+   
     })
     WA.room.onLeaveLayer('game03Zone').subscribe(() => {
         console.log('game03Zone onLeaveLayer');
     })
 
     
+
+
+    //엑셀문서
+    WA.room.onEnterLayer('doc01Zone').subscribe(() => {
+        console.log('doc01Zone onEnterLayer');
+
+        const triggerMessage = WA.ui.displayActionMessage({
+            message: "Press or tap the spacebar to view the document",
+            callback: () => {
+                WA.nav.openCoWebSite("https://docs.google.com/spreadsheets/d/1tuUOTgNysVX5du17sYv70esSen7EC8RcuMxnVoWr0is/edit?usp=sharing", true, "allowfullscreen");
+            }
+        });
+        
+        setTimeout(() => {
+            // later
+            triggerMessage.remove();
+        }, 3000);
+   
+    })
+    WA.room.onLeaveLayer('doc01Zone').subscribe(() => {
+        console.log('doc01Zone onLeaveLayer');
+    })
+
+    
+
+
+    //ppt문서
+    WA.room.onEnterLayer('doc02Zone').subscribe(() => {
+        console.log('doc02Zone onEnterLayer');
+
+        const triggerMessage = WA.ui.displayActionMessage({
+            message: "Press or tap the spacebar to view the document",
+            callback: () => {
+                WA.nav.openCoWebSite("https://docs.google.com/presentation/d/1MFUsAmhGPr8FzK4qmD-LFSW9S8oA6xGffvmxU1av32s/edit?usp=sharing", true, "allowfullscreen");
+            }
+        });
+        
+        setTimeout(() => {
+            // later
+            triggerMessage.remove();
+        }, 3000);
+   
+    })
+    WA.room.onLeaveLayer('doc02Zone').subscribe(() => {
+        console.log('doc02Zone onLeaveLayer');
+    })
+
+    
+
+
+    //doc문서
+    WA.room.onEnterLayer('doc03Zone').subscribe(() => {
+        console.log('doc03Zone onEnterLayer');
+
+        const triggerMessage = WA.ui.displayActionMessage({
+            message: "Press or tap the spacebar to view the document",
+            callback: () => {
+                WA.nav.openCoWebSite("https://docs.google.com/document/d/1XBFf880XQiADWhP7HTxjuN6N7as6U76i0i94riQVJR8/edit?usp=sharing", true, "allowfullscreen");
+            }
+        });
+        
+        setTimeout(() => {
+            // later
+            triggerMessage.remove();
+        }, 3000);
+   
+    })
+    WA.room.onLeaveLayer('doc03Zone').subscribe(() => {
+        console.log('doc03Zone onLeaveLayer');
+    })
+
+
 
 
 
