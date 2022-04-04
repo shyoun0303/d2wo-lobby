@@ -168,6 +168,29 @@ WA.onInit().then(() => {
     })
 
 
+      
+
+
+    //설문지 문서
+    WA.room.onEnterLayer('doc04Zone').subscribe(() => {
+        console.log('doc04Zone onEnterLayer');
+
+        const triggerMessage = WA.ui.displayActionMessage({
+            message: "Press or tap the spacebar to view the survey",
+            callback: () => {
+                WA.nav.openCoWebSite("https://docs.google.com/forms/d/e/1FAIpQLSdUMKWnXX_lLQgPhgpiOnIQXQxr3JhDFXvWhUmn9abE9sw1zg/viewform?usp=sf_link", true, "allowfullscreen");
+            }
+        });
+        
+        setTimeout(() => {
+            // later
+            triggerMessage.remove();
+        }, 3000);
+   
+    })
+    WA.room.onLeaveLayer('doc04Zone').subscribe(() => {
+        console.log('doc04Zone onLeaveLayer');
+    })
 
 
 
